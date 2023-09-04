@@ -10,6 +10,7 @@ import csv
 cwd = os.getcwd()
 print (cwd)
 
+#stores the directory of where the file is saved
 PyBankdata = "../Resources/budget_data.csv"
 months = []
 months_adj = []
@@ -18,6 +19,7 @@ PnL_Changes = []
 PnL_Sum = 0
 Changes_Sum = 0
 
+#opens and reads the file
 with open (PyBankdata,'r') as file_to_be_read:
     csv_reader = csv.reader(file_to_be_read)
     #skips the headers
@@ -49,6 +51,7 @@ with open (PyBankdata,'r') as file_to_be_read:
 PyBank = list(zip(months_adj,PnL_Changes)) 
 #print(PyBank)           
 
+#gets the smallest item in the tuple
 min_number = min(PyBank, key=lambda tup: tup[1])
 #print(min_number)
     

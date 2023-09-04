@@ -43,6 +43,7 @@ with open (PyPolldata,'r') as file_to_be_read:
     #print(Unique_candidate)
     #print(Number_of_votes)
     
+    #stores the percentages of the votes and formats the decimals to percentages
     for y in range(len(Number_of_votes)):
         percentage = Number_of_votes[y]/number_of_votes
         Percent_of_votes.append("{:.3%}".format(float(round(percentage,5))))
